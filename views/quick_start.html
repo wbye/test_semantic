@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bower_components/semantic/dist/semantic.css">
+</head>
+
+<body>
+    <!-- Concise HTMl -->
+    <div class="ui three buttons">
+        <button class="ui button active">one</button>
+        <button class="ui button">two</button>
+        <button class="ui button">three</button>
+    </div>
+    <!-- Intuitive JS -->
+    <!-- fluid 流动的 -->
+    <select name="skills" multiple=""  class="ui fluid dropdown">
+        <option value="">Skills</option>
+        <option value="angular">Angular</option>
+        <option value="css">CSS</option>
+        <option value="ember">Ember</option>
+        <option value="html">HTML</option>
+        <option value="javascript">Javascript</option>
+        <option value="meteor">Meteor</option>
+        <option value="node">NodeJS</option>
+    </select>
+    <!-- Simplified Debugging -->
+    <div class="ui small sequenced images">
+      <img src="/images/kristy.png" class="ui circular image">
+      <img src="/images/kristy.png" class="ui circular image">
+      <img src="/images/kristy.png" class="ui circular image">
+    </div>
+</body>
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="/bower_components/semantic/dist/semantic.js"></script>
+<script type="text/javascript">
+	$("select.dropdown").dropdown("set selected",['meteor','ember']);
+	$(".sequenced.images .image").transition({
+		debug:true,
+		animation : 'jiggle',
+	    duration  : 500,
+	    interval  : 200
+	});
+</script>
+</html>
